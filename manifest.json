@@ -1,0 +1,31 @@
+{
+    "manifest_version": 3,
+    "name": "MusePrint",
+    "description": "An extension to print Musescore sheets for free.",
+    "version": "1.0.0.0",
+    "icons": {
+        "16": "images/icon.png",
+        "32": "images/icon.png",
+        "48": "images/icon.png",
+        "128": "images/icon.png"
+    },
+    "background": {
+        "service_worker": "index.js"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "https://musescore.com/*"
+            ],
+            "js": [
+                "content.js"
+            ]
+        }
+    ],
+    "action": {
+        "default_icon": "images/icon.png"
+    },
+    "permissions": [
+        "activeTab"
+    ]
+}
