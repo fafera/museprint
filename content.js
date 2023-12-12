@@ -17,7 +17,6 @@ chrome.runtime.onMessage.addListener(function (request) {
             div.scrollIntoView();
             const imgElement = await isElementLoaded(div, 'img');
             const anchor = document.createElement('a');
-            console.log(imgElement.src);
             anchor.href = imgElement.src;
             anchor.download = 'score';
             anchor.click();
